@@ -1,0 +1,258 @@
+[
+  {
+    "id": "lunch_001",
+    "name": "Ukrainian borscht with sour cream",
+    "meal_type": "lunch",
+    "tags": ["ukrainian", "soup", "family"],
+    "servings": 4,
+    "ingredients": [
+      {"name": "beetroot", "quantity": 400, "unit": "g"},
+      {"name": "potatoes", "quantity": 400, "unit": "g"},
+      {"name": "carrot", "quantity": 200, "unit": "g"},
+      {"name": "onion", "quantity": 1, "unit": "pcs"},
+      {"name": "cabbage", "quantity": 300, "unit": "g"},
+      {"name": "sour cream", "quantity": 150, "unit": "g"}
+    ],
+    "steps": [
+      "Cook vegetables in water.",
+      "Add beetroot and cabbage.",
+      "Simmer and serve with sour cream."
+    ]
+  },
+  {
+    "id": "lunch_002",
+    "name": "Chicken soup with noodles",
+    "meal_type": "lunch",
+    "tags": ["soup", "kids-friendly"],
+    "servings": 4,
+    "ingredients": [
+      {"name": "chicken", "quantity": 500, "unit": "g"},
+      {"name": "noodles", "quantity": 150, "unit": "g"},
+      {"name": "carrot", "quantity": 1, "unit": "pcs"},
+      {"name": "onion", "quantity": 1, "unit": "pcs"}
+    ],
+    "steps": [
+      "Boil chicken.",
+      "Add vegetables and noodles.",
+      "Cook until ready."
+    ]
+  },
+  {
+    "id": "lunch_003",
+    "name": "Mashed potatoes with chicken cutlet",
+    "meal_type": "lunch",
+    "tags": ["ukrainian", "family"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "potatoes", "quantity": 500, "unit": "g"},
+      {"name": "chicken mince", "quantity": 300, "unit": "g"},
+      {"name": "milk", "quantity": 100, "unit": "ml"}
+    ],
+    "steps": [
+      "Boil and mash potatoes.",
+      "Form cutlets and fry.",
+      "Serve together."
+    ]
+  },
+  {
+    "id": "lunch_004",
+    "name": "Buckwheat with chicken and vegetables",
+    "meal_type": "lunch",
+    "tags": ["healthy", "ukrainian"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "buckwheat", "quantity": 200, "unit": "g"},
+      {"name": "chicken breast", "quantity": 300, "unit": "g"},
+      {"name": "carrot", "quantity": 1, "unit": "pcs"}
+    ],
+    "steps": [
+      "Cook buckwheat.",
+      "Fry chicken and vegetables.",
+      "Mix and serve."
+    ]
+  },
+  {
+    "id": "lunch_005",
+    "name": "Pasta with chicken and cream sauce",
+    "meal_type": "lunch",
+    "tags": ["family"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "pasta", "quantity": 200, "unit": "g"},
+      {"name": "chicken breast", "quantity": 250, "unit": "g"},
+      {"name": "cream", "quantity": 150, "unit": "ml"}
+    ],
+    "steps": [
+      "Cook pasta.",
+      "Cook chicken in cream.",
+      "Mix together."
+    ]
+  },
+  {
+    "id": "lunch_006",
+    "name": "Rice with vegetables and eggs",
+    "meal_type": "lunch",
+    "tags": ["quick", "budget"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "rice", "quantity": 200, "unit": "g"},
+      {"name": "eggs", "quantity": 2, "unit": "pcs"},
+      {"name": "mixed vegetables", "quantity": 200, "unit": "g"}
+    ],
+    "steps": [
+      "Cook rice.",
+      "Add vegetables and eggs.",
+      "Stir and serve."
+    ]
+  },
+  {
+    "id": "lunch_007",
+    "name": "Potato pancakes (deruny) with sour cream",
+    "meal_type": "lunch",
+    "tags": ["ukrainian", "traditional"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "potatoes", "quantity": 600, "unit": "g"},
+      {"name": "egg", "quantity": 1, "unit": "pcs"},
+      {"name": "flour", "quantity": 40, "unit": "g"},
+      {"name": "sour cream", "quantity": 100, "unit": "g"}
+    ],
+    "steps": [
+      "Grate potatoes.",
+      "Mix with egg and flour.",
+      "Fry pancakes and serve with sour cream."
+    ]
+  },
+  {
+    "id": "lunch_008",
+    "name": "Chicken Caesar salad",
+    "meal_type": "lunch",
+    "tags": ["light", "protein"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "chicken breast", "quantity": 150, "unit": "g"},
+      {"name": "lettuce", "quantity": 100, "unit": "g"},
+      {"name": "croutons", "quantity": 40, "unit": "g"},
+      {"name": "parmesan", "quantity": 30, "unit": "g"}
+    ],
+    "steps": [
+      "Cook chicken.",
+      "Mix with lettuce and croutons.",
+      "Add parmesan."
+    ]
+  },
+  {
+    "id": "lunch_009",
+    "name": "Vegetable soup",
+    "meal_type": "lunch",
+    "tags": ["vegetarian", "healthy"],
+    "servings": 4,
+    "ingredients": [
+      {"name": "potatoes", "quantity": 400, "unit": "g"},
+      {"name": "carrot", "quantity": 200, "unit": "g"},
+      {"name": "onion", "quantity": 1, "unit": "pcs"},
+      {"name": "zucchini", "quantity": 300, "unit": "g"}
+    ],
+    "steps": [
+      "Chop vegetables.",
+      "Cook in water until soft."
+    ]
+  },
+  {
+    "id": "lunch_010",
+    "name": "Cabbage rolls (holubtsi)",
+    "meal_type": "lunch",
+    "tags": ["ukrainian", "family"],
+    "servings": 4,
+    "ingredients": [
+      {"name": "cabbage", "quantity": 1, "unit": "pcs"},
+      {"name": "rice", "quantity": 200, "unit": "g"},
+      {"name": "minced meat", "quantity": 400, "unit": "g"}
+    ],
+    "steps": [
+      "Prepare filling.",
+      "Wrap in cabbage leaves.",
+      "Cook until ready."
+    ]
+  },
+  {
+    "id": "lunch_011",
+    "name": "Fried potatoes with mushrooms",
+    "meal_type": "lunch",
+    "tags": ["vegetarian"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "potatoes", "quantity": 600, "unit": "g"},
+      {"name": "mushrooms", "quantity": 300, "unit": "g"}
+    ],
+    "steps": [
+      "Fry potatoes.",
+      "Add mushrooms.",
+      "Cook until golden."
+    ]
+  },
+  {
+    "id": "lunch_012",
+    "name": "Chicken wrap",
+    "meal_type": "lunch",
+    "tags": ["quick"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "tortilla", "quantity": 1, "unit": "pcs"},
+      {"name": "chicken", "quantity": 150, "unit": "g"},
+      {"name": "lettuce", "quantity": 50, "unit": "g"}
+    ],
+    "steps": [
+      "Cook chicken.",
+      "Wrap with vegetables in tortilla."
+    ]
+  },
+  {
+    "id": "lunch_013",
+    "name": "Pasta with tomato sauce",
+    "meal_type": "lunch",
+    "tags": ["budget"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "pasta", "quantity": 200, "unit": "g"},
+      {"name": "tomato sauce", "quantity": 200, "unit": "g"}
+    ],
+    "steps": [
+      "Cook pasta.",
+      "Add sauce and mix."
+    ]
+  },
+  {
+    "id": "lunch_014",
+    "name": "Rice with chicken curry",
+    "meal_type": "lunch",
+    "tags": ["international"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "rice", "quantity": 200, "unit": "g"},
+      {"name": "chicken", "quantity": 300, "unit": "g"},
+      {"name": "curry sauce", "quantity": 150, "unit": "g"}
+    ],
+    "steps": [
+      "Cook rice.",
+      "Cook chicken in curry sauce.",
+      "Serve together."
+    ]
+  },
+  {
+    "id": "lunch_015",
+    "name": "Vegetable salad with feta",
+    "meal_type": "lunch",
+    "tags": ["light", "vegetarian"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "tomatoes", "quantity": 2, "unit": "pcs"},
+      {"name": "cucumber", "quantity": 1, "unit": "pcs"},
+      {"name": "feta cheese", "quantity": 80, "unit": "g"}
+    ],
+    "steps": [
+      "Chop vegetables.",
+      "Add feta and mix."
+    ]
+  }
+]

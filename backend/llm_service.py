@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
+from recipe_service import get_recipes_by_meal_type
 
 load_dotenv()
 
@@ -105,3 +106,84 @@ def generate_cooking_steps(meals, family_profile=None):
     )
 
     return response.choices[0].message.content
+
+def generate_day_meals(day, family_profile=None, used_meals=None):
+    profile_text = family_profile or "Family preferences not specified."
+
+    breakfast_recipes = get_recipes_by_meal_type("breakfast")
+    lunch_recipes = get_recipes_by_meal_type("lunch")
+    dinner_recipes = get_recipes_by_meal_type("dinner")
+
+    prompt = f"""
+    Select meal options for {day} from the recipe database below.
+
+    used_meals = used_meals or []
+
+    Family profile:
+    {profile_text}
+
+    Breakfast recipes:
+    {[recipe["name"] for recipe in breakfast_recipes]}
+
+    Lunch recipes:
+    {[recipe["name"] for recipe in lunch_recipes]}
+
+    Dinner recipes:
+    {[recipe["name"] for recipe in dinner_recipes]}
+
+    Choose:
+    - 3 breakfast options
+    - 3 lunch options
+    - 3 dinner options
+
+    Already selected meals this week:
+    {used_meals}
+
+    Rules:
+    - Use ONLY recipe names from the provided database
+    - Do NOT select meals from the already selected meals list
+    - Prefer variety across the week
+    - Do not invent new meals
+    - Return format EXACTLY:
+
+    Breakfast:
+    1. ...
+    2. ...
+    3. ...
+
+    Lunch:
+    1. ...
+    2. ...
+    3. ...
+
+    Dinner:
+    1. ...
+    2. ...
+    3. ...
+    """
+
+    response = client.chat.completions.create(
+        model="openai/gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}],
+    )
+
+    return response.choices[0].message.content
+
+def parse_day_meals(text):
+    sections = {"breakfast": [], "lunch": [], "dinner": []}
+    current = None
+
+    for line in text.split("\n"):
+        line = line.strip()
+
+        if line.lower().startswith("breakfast"):
+            current = "breakfast"
+        elif line.lower().startswith("lunch"):
+            current = "lunch"
+        elif line.lower().startswith("dinner"):
+            current = "dinner"
+        elif line and current:
+            cleaned = line.lstrip("123. ").strip()
+            sections[current].append(cleaned)
+
+    return sections

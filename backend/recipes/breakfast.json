@@ -1,0 +1,243 @@
+[
+  {
+    "id": "breakfast_001",
+    "name": "Syrnyky (cottage cheese pancakes)",
+    "meal_type": "breakfast",
+    "tags": ["ukrainian", "kids-friendly", "protein"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "cottage cheese", "quantity": 400, "unit": "g"},
+      {"name": "egg", "quantity": 1, "unit": "pcs"},
+      {"name": "flour", "quantity": 50, "unit": "g"},
+      {"name": "sugar", "quantity": 20, "unit": "g"}
+    ],
+    "steps": [
+      "Mix all ingredients.",
+      "Form small pancakes.",
+      "Fry until golden on both sides."
+    ]
+  },
+  {
+    "id": "breakfast_002",
+    "name": "Omelette with tomatoes",
+    "meal_type": "breakfast",
+    "tags": ["quick", "protein"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "eggs", "quantity": 2, "unit": "pcs"},
+      {"name": "tomato", "quantity": 1, "unit": "pcs"},
+      {"name": "butter", "quantity": 10, "unit": "g"}
+    ],
+    "steps": [
+      "Beat eggs.",
+      "Add chopped tomato.",
+      "Cook in a pan with butter."
+    ]
+  },
+  {
+    "id": "breakfast_003",
+    "name": "Buckwheat porridge with butter",
+    "meal_type": "breakfast",
+    "tags": ["ukrainian", "healthy"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "buckwheat", "quantity": 80, "unit": "g"},
+      {"name": "water", "quantity": 200, "unit": "ml"},
+      {"name": "butter", "quantity": 10, "unit": "g"}
+    ],
+    "steps": [
+      "Boil buckwheat in water.",
+      "Cook until soft.",
+      "Add butter before serving."
+    ]
+  },
+  {
+    "id": "breakfast_004",
+    "name": "Oatmeal with milk and honey",
+    "meal_type": "breakfast",
+    "tags": ["healthy", "quick"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "oats", "quantity": 80, "unit": "g"},
+      {"name": "milk", "quantity": 200, "unit": "ml"},
+      {"name": "honey", "quantity": 10, "unit": "g"}
+    ],
+    "steps": [
+      "Cook oats with milk.",
+      "Add honey before serving."
+    ]
+  },
+  {
+    "id": "breakfast_005",
+    "name": "Fried eggs with sausage",
+    "meal_type": "breakfast",
+    "tags": ["quick", "protein"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "eggs", "quantity": 2, "unit": "pcs"},
+      {"name": "sausage", "quantity": 80, "unit": "g"}
+    ],
+    "steps": [
+      "Fry sausage.",
+      "Add eggs and cook."
+    ]
+  },
+  {
+    "id": "breakfast_006",
+    "name": "Pancakes with jam",
+    "meal_type": "breakfast",
+    "tags": ["kids-friendly", "sweet"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "flour", "quantity": 150, "unit": "g"},
+      {"name": "milk", "quantity": 250, "unit": "ml"},
+      {"name": "egg", "quantity": 1, "unit": "pcs"},
+      {"name": "jam", "quantity": 50, "unit": "g"}
+    ],
+    "steps": [
+      "Mix batter.",
+      "Cook thin pancakes.",
+      "Serve with jam."
+    ]
+  },
+  {
+    "id": "breakfast_007",
+    "name": "Semolina porridge",
+    "meal_type": "breakfast",
+    "tags": ["kids-friendly"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "semolina", "quantity": 40, "unit": "g"},
+      {"name": "milk", "quantity": 250, "unit": "ml"},
+      {"name": "sugar", "quantity": 10, "unit": "g"}
+    ],
+    "steps": [
+      "Heat milk.",
+      "Add semolina slowly.",
+      "Cook until thick."
+    ]
+  },
+  {
+    "id": "breakfast_008",
+    "name": "Cottage cheese with honey",
+    "meal_type": "breakfast",
+    "tags": ["protein", "quick"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "cottage cheese", "quantity": 200, "unit": "g"},
+      {"name": "honey", "quantity": 10, "unit": "g"}
+    ],
+    "steps": [
+      "Serve cottage cheese.",
+      "Drizzle with honey."
+    ]
+  },
+  {
+    "id": "breakfast_009",
+    "name": "Sandwich with cheese and butter",
+    "meal_type": "breakfast",
+    "tags": ["quick"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "bread", "quantity": 2, "unit": "slices"},
+      {"name": "butter", "quantity": 10, "unit": "g"},
+      {"name": "cheese", "quantity": 40, "unit": "g"}
+    ],
+    "steps": [
+      "Spread butter on bread.",
+      "Add cheese."
+    ]
+  },
+  {
+    "id": "breakfast_010",
+    "name": "Rice porridge with milk",
+    "meal_type": "breakfast",
+    "tags": ["kids-friendly"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "rice", "quantity": 80, "unit": "g"},
+      {"name": "milk", "quantity": 250, "unit": "ml"}
+    ],
+    "steps": [
+      "Cook rice in milk until soft."
+    ]
+  },
+
+  {
+    "id": "breakfast_011",
+    "name": "Boiled eggs with bread",
+    "meal_type": "breakfast",
+    "tags": ["quick", "protein"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "eggs", "quantity": 2, "unit": "pcs"},
+      {"name": "bread", "quantity": 2, "unit": "slices"}
+    ],
+    "steps": [
+      "Boil eggs.",
+      "Serve with bread."
+    ]
+  },
+  {
+    "id": "breakfast_012",
+    "name": "Omelette with cheese",
+    "meal_type": "breakfast",
+    "tags": ["protein"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "eggs", "quantity": 2, "unit": "pcs"},
+      {"name": "cheese", "quantity": 40, "unit": "g"}
+    ],
+    "steps": [
+      "Beat eggs.",
+      "Add cheese.",
+      "Cook in pan."
+    ]
+  },
+  {
+    "id": "breakfast_013",
+    "name": "Pancakes with sour cream",
+    "meal_type": "breakfast",
+    "tags": ["traditional"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "flour", "quantity": 150, "unit": "g"},
+      {"name": "milk", "quantity": 250, "unit": "ml"},
+      {"name": "sour cream", "quantity": 80, "unit": "g"}
+    ],
+    "steps": [
+      "Cook pancakes.",
+      "Serve with sour cream."
+    ]
+  },
+  {
+    "id": "breakfast_014",
+    "name": "Buckwheat with milk",
+    "meal_type": "breakfast",
+    "tags": ["ukrainian"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "buckwheat", "quantity": 80, "unit": "g"},
+      {"name": "milk", "quantity": 200, "unit": "ml"}
+    ],
+    "steps": [
+      "Cook buckwheat.",
+      "Serve with milk."
+    ]
+  },
+  {
+    "id": "breakfast_015",
+    "name": "Toast with peanut butter",
+    "meal_type": "breakfast",
+    "tags": ["quick"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "bread", "quantity": 2, "unit": "slices"},
+      {"name": "peanut butter", "quantity": 30, "unit": "g"}
+    ],
+    "steps": [
+      "Toast bread.",
+      "Spread peanut butter."
+    ]
+  }
+]

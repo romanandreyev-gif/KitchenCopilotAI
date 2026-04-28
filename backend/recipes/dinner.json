@@ -1,0 +1,253 @@
+[
+  {
+    "id": "dinner_001",
+    "name": "Baked chicken with potatoes",
+    "meal_type": "dinner",
+    "tags": ["family", "ukrainian"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "chicken thigh", "quantity": 400, "unit": "g"},
+      {"name": "potatoes", "quantity": 600, "unit": "g"},
+      {"name": "carrot", "quantity": 1, "unit": "pcs"}
+    ],
+    "steps": [
+      "Season chicken and vegetables.",
+      "Bake in oven until cooked.",
+      "Serve warm."
+    ]
+  },
+  {
+    "id": "dinner_002",
+    "name": "Salmon with rice and broccoli",
+    "meal_type": "dinner",
+    "tags": ["healthy"],
+    "servings": 1,
+    "ingredients": [
+      {"name": "salmon fillet", "quantity": 180, "unit": "g"},
+      {"name": "rice", "quantity": 100, "unit": "g"},
+      {"name": "broccoli", "quantity": 150, "unit": "g"}
+    ],
+    "steps": [
+      "Cook rice.",
+      "Bake or fry salmon.",
+      "Steam broccoli."
+    ]
+  },
+  {
+    "id": "dinner_003",
+    "name": "Chicken stir-fry with vegetables",
+    "meal_type": "dinner",
+    "tags": ["quick"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "chicken breast", "quantity": 300, "unit": "g"},
+      {"name": "mixed vegetables", "quantity": 300, "unit": "g"},
+      {"name": "soy sauce", "quantity": 30, "unit": "ml"}
+    ],
+    "steps": [
+      "Slice chicken.",
+      "Stir-fry with vegetables.",
+      "Add soy sauce."
+    ]
+  },
+  {
+    "id": "dinner_004",
+    "name": "Spaghetti Bolognese",
+    "meal_type": "dinner",
+    "tags": ["family"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "spaghetti", "quantity": 200, "unit": "g"},
+      {"name": "minced beef", "quantity": 300, "unit": "g"},
+      {"name": "tomato sauce", "quantity": 200, "unit": "g"}
+    ],
+    "steps": [
+      "Cook spaghetti.",
+      "Cook beef with sauce.",
+      "Combine and serve."
+    ]
+  },
+  {
+    "id": "dinner_005",
+    "name": "Buckwheat with mushrooms",
+    "meal_type": "dinner",
+    "tags": ["vegetarian", "ukrainian"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "buckwheat", "quantity": 200, "unit": "g"},
+      {"name": "mushrooms", "quantity": 300, "unit": "g"},
+      {"name": "onion", "quantity": 1, "unit": "pcs"}
+    ],
+    "steps": [
+      "Cook buckwheat.",
+      "Fry mushrooms with onion.",
+      "Mix together."
+    ]
+  },
+  {
+    "id": "dinner_006",
+    "name": "Turkey meatballs with mashed potatoes",
+    "meal_type": "dinner",
+    "tags": ["family"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "turkey mince", "quantity": 300, "unit": "g"},
+      {"name": "potatoes", "quantity": 500, "unit": "g"}
+    ],
+    "steps": [
+      "Form meatballs.",
+      "Cook them in pan.",
+      "Serve with mashed potatoes."
+    ]
+  },
+  {
+    "id": "dinner_007",
+    "name": "Vegetable stir-fry with tofu",
+    "meal_type": "dinner",
+    "tags": ["vegetarian"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "tofu", "quantity": 300, "unit": "g"},
+      {"name": "mixed vegetables", "quantity": 300, "unit": "g"},
+      {"name": "soy sauce", "quantity": 30, "unit": "ml"}
+    ],
+    "steps": [
+      "Cook tofu.",
+      "Add vegetables and fry.",
+      "Add soy sauce."
+    ]
+  },
+  {
+    "id": "dinner_008",
+    "name": "Chicken with rice and vegetables",
+    "meal_type": "dinner",
+    "tags": ["family"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "chicken breast", "quantity": 300, "unit": "g"},
+      {"name": "rice", "quantity": 200, "unit": "g"},
+      {"name": "vegetables", "quantity": 200, "unit": "g"}
+    ],
+    "steps": [
+      "Cook rice.",
+      "Cook chicken and vegetables.",
+      "Serve together."
+    ]
+  },
+  {
+    "id": "dinner_009",
+    "name": "Stuffed bell peppers",
+    "meal_type": "dinner",
+    "tags": ["ukrainian"],
+    "servings": 4,
+    "ingredients": [
+      {"name": "bell peppers", "quantity": 6, "unit": "pcs"},
+      {"name": "rice", "quantity": 200, "unit": "g"},
+      {"name": "minced meat", "quantity": 400, "unit": "g"}
+    ],
+    "steps": [
+      "Prepare filling.",
+      "Stuff peppers.",
+      "Cook until ready."
+    ]
+  },
+  {
+    "id": "dinner_010",
+    "name": "Fried potatoes with sausage",
+    "meal_type": "dinner",
+    "tags": ["quick"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "potatoes", "quantity": 600, "unit": "g"},
+      {"name": "sausage", "quantity": 200, "unit": "g"}
+    ],
+    "steps": [
+      "Fry potatoes.",
+      "Add sausage.",
+      "Cook until crispy."
+    ]
+  },
+  {
+    "id": "dinner_011",
+    "name": "Oven-baked fish with vegetables",
+    "meal_type": "dinner",
+    "tags": ["healthy"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "white fish", "quantity": 400, "unit": "g"},
+      {"name": "zucchini", "quantity": 300, "unit": "g"},
+      {"name": "carrot", "quantity": 1, "unit": "pcs"}
+    ],
+    "steps": [
+      "Season fish.",
+      "Bake with vegetables."
+    ]
+  },
+  {
+    "id": "dinner_012",
+    "name": "Chicken schnitzel with salad",
+    "meal_type": "dinner",
+    "tags": ["family"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "chicken breast", "quantity": 300, "unit": "g"},
+      {"name": "breadcrumbs", "quantity": 80, "unit": "g"},
+      {"name": "lettuce", "quantity": 100, "unit": "g"}
+    ],
+    "steps": [
+      "Bread chicken.",
+      "Fry schnitzel.",
+      "Serve with salad."
+    ]
+  },
+  {
+    "id": "dinner_013",
+    "name": "Rice with vegetables and eggs",
+    "meal_type": "dinner",
+    "tags": ["budget"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "rice", "quantity": 200, "unit": "g"},
+      {"name": "eggs", "quantity": 2, "unit": "pcs"},
+      {"name": "vegetables", "quantity": 200, "unit": "g"}
+    ],
+    "steps": [
+      "Cook rice.",
+      "Add vegetables and eggs.",
+      "Mix well."
+    ]
+  },
+  {
+    "id": "dinner_014",
+    "name": "Pasta with pesto and chicken",
+    "meal_type": "dinner",
+    "tags": ["quick"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "pasta", "quantity": 200, "unit": "g"},
+      {"name": "chicken breast", "quantity": 250, "unit": "g"},
+      {"name": "pesto", "quantity": 100, "unit": "g"}
+    ],
+    "steps": [
+      "Cook pasta.",
+      "Cook chicken.",
+      "Mix with pesto."
+    ]
+  },
+  {
+    "id": "dinner_015",
+    "name": "Vegetable stew",
+    "meal_type": "dinner",
+    "tags": ["vegetarian"],
+    "servings": 2,
+    "ingredients": [
+      {"name": "potatoes", "quantity": 400, "unit": "g"},
+      {"name": "zucchini", "quantity": 300, "unit": "g"},
+      {"name": "carrot", "quantity": 1, "unit": "pcs"}
+    ],
+    "steps": [
+      "Chop vegetables.",
+      "Cook until soft."
+    ]
+  }
+]
