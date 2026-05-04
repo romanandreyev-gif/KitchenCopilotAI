@@ -5,45 +5,32 @@ from recipe_service import get_recipes_by_meal_type
 
 load_dotenv()
 
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=OPENROUTER_API_KEY,
+    api_key=os.getenv("OPENROUTER_API_KEY"),
 )
 
 
 def generate_meals(family_profile=None):
-    profile_text = family_profile or "No family profile provided. Use general family-friendly preferences."
+    profile_text = family_profile or "No family profile provided."
 
     prompt = f"""
-    Generate 6 dinner meal options for this family profile:
+    Generate 6 family-friendly meal ideas.
 
+    Family profile:
     {profile_text}
-
-    Requirements:
-    - family-friendly
-    - simple recipes
-    - varied meals
-    - suitable for kids
-    - realistic for home cooking
 
     Return ONLY a numbered list of meal names.
     """
 
     response = client.chat.completions.create(
         model="openai/gpt-4o-mini",
-        messages=[
-            {"role": "user", "content": prompt}
-        ],
+        messages=[{"role": "user", "content": prompt}],
     )
 
     text = response.choices[0].message.content
+    return [line.strip("0123456789. -") for line in text.split("\n") if line.strip()]
 
-    meals = text.split("\n")
-    meals = [m.strip("0123456789. -").strip() for m in meals if m.strip()]
-
-    return meals
 
 def generate_grocery_list(meals, family_profile=None):
     profile_text = family_profile or "Family size is not provided. Estimate for a family of 4."
@@ -57,33 +44,22 @@ def generate_grocery_list(meals, family_profile=None):
     Selected meals:
     {', '.join(meals)}
 
-    Requirements:
-    - estimate quantities based on family size
-    - group similar ingredients
-    - use practical shopping units
-    - keep it concise
-    - no explanations
-
-    Example format:
-    ☐ Chicken breast: 600 g
-    ☐ Pasta: 400 g
-    ☐ Tomatoes: 6 pcs
+    Return a clean checklist with quantities.
     """
 
     response = client.chat.completions.create(
         model="openai/gpt-4o-mini",
-        messages=[
-            {"role": "user", "content": prompt}
-        ],
+        messages=[{"role": "user", "content": prompt}],
     )
 
     return response.choices[0].message.content
 
+
 def generate_cooking_steps(meals, family_profile=None):
-    profile_text = family_profile or "Family size is not provided."
+    profile_text = family_profile or "Family preferences not provided."
 
     prompt = f"""
-    Create simple cooking steps for these selected meals.
+    Create short cooking steps for these meals.
 
     Family profile:
     {profile_text}
@@ -91,23 +67,20 @@ def generate_cooking_steps(meals, family_profile=None):
     Selected meals:
     {', '.join(meals)}
 
-    Requirements:
-    - short and practical
-    - suitable for home cooking
-    - include preparation order
-    - no long explanations
+    Keep it practical and concise.
     """
 
     response = client.chat.completions.create(
         model="openai/gpt-4o-mini",
-        messages=[
-            {"role": "user", "content": prompt}
-        ],
+        messages=[{"role": "user", "content": prompt}],
     )
 
     return response.choices[0].message.content
 
-def generate_day_meals(day, family_profile=None, used_meals=None):
+
+def generate_day_meals(day, family_profile=None, used_meals=None, products_of_week=None):
+    used_meals = used_meals or []
+    products_of_week = products_of_week or []
     profile_text = family_profile or "Family preferences not specified."
 
     breakfast_recipes = get_recipes_by_meal_type("breakfast")
@@ -117,10 +90,14 @@ def generate_day_meals(day, family_profile=None, used_meals=None):
     prompt = f"""
     Select meal options for {day} from the recipe database below.
 
-    used_meals = used_meals or []
-
     Family profile:
     {profile_text}
+
+    Products to prioritize this week:
+    {products_of_week}
+
+    Already selected meals this week:
+    {used_meals}
 
     Breakfast recipes:
     {[recipe["name"] for recipe in breakfast_recipes]}
@@ -136,15 +113,16 @@ def generate_day_meals(day, family_profile=None, used_meals=None):
     - 3 lunch options
     - 3 dinner options
 
-    Already selected meals this week:
-    {used_meals}
-
     Rules:
     - Use ONLY recipe names from the provided database
     - Do NOT select meals from the already selected meals list
-    - Prefer variety across the week
+    - Prefer recipes that include products of the week, if such recipes exist
+    - If there are no matching recipes, choose the best available recipes from the database
     - Do not invent new meals
-    - Return format EXACTLY:
+    - Return ONLY meal names
+    - Each meal name must be shorter than 80 characters
+
+    Return format EXACTLY:
 
     Breakfast:
     1. ...
@@ -169,6 +147,7 @@ def generate_day_meals(day, family_profile=None, used_meals=None):
 
     return response.choices[0].message.content
 
+
 def parse_day_meals(text):
     sections = {"breakfast": [], "lunch": [], "dinner": []}
     current = None
@@ -183,7 +162,7 @@ def parse_day_meals(text):
         elif line.lower().startswith("dinner"):
             current = "dinner"
         elif line and current:
-            cleaned = line.lstrip("123. ").strip()
+            cleaned = line.lstrip("0123456789. -").strip()
             sections[current].append(cleaned)
 
     return sections
