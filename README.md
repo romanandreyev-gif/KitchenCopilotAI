@@ -1,184 +1,175 @@
-🍽️ KitchenCoPilot AI
+KitchenCoPilot AI
 
-AI-powered Telegram bot for family meal planning through voting
+KitchenCoPilot AI is a Telegram bot that helps families plan weekly meals in a smart and collaborative way.
 
-⸻
-
-🚀 Overview
-
-KitchenCoPilot AI is a Telegram bot that helps families agree on what to cook by combining AI-generated meal suggestions with simple group voting.
-
-Instead of spending time discussing and negotiating meals, families can:
-	•	get smart meal suggestions
-	•	vote on preferred dishes directly in Telegram
-	•	receive a finalized weekly plan and grocery list
+It combines AI-generated meal planning, family voting, automatic grocery lists, and structured recipe delivery to remove the daily question: “What should we cook?”
 
 ⸻
 
-❗ Problem
+Features
 
-Planning meals for a family is harder than it seems:
-	•	different tastes (adults vs kids)
-	•	repeated meals due to lack of ideas
-	•	time wasted on daily decisions
-	•	friction in agreeing on what to cook
+1. Weekly Planning with Voting
 
-Most tools focus on recipes — not on decision-making.
+* Generates meal options for each day
+* Family members vote
+* Most popular dishes form the weekly menu
 
-⸻
+2. Smart Weekly Plan (No Voting)
 
-💡 Solution
+* Automatically generates a full weekly menu
+* Based on family preferences
+* Avoids repeating meals
+* Can prioritize specific products (e.g. salmon, chicken)
 
-KitchenCoPilot AI solves this by:
-	1.	Generating meal options using AI
-	2.	Turning them into a Telegram poll
-	3.	Letting the whole family vote
-	4.	Automatically creating:
-	•	a final meal plan
-	•	a grocery list
+3. Grocery List Generator
 
-Key idea:
-Reduce decision friction, not just suggest recipes.
+* Combines ingredients from all meals
+* Removes duplicates
+* Groups items by categories (meat, vegetables, dairy, etc.)
 
-⸻
+4. Cook Mode
 
-🧠 Core Features (MVP)
-	•	AI-generated weekly meal options
-	•	Telegram poll for family voting
-	•	Automatic selection of winning meals
-	•	Smart grocery list generation
+* One user can assign themselves as the cook
+* The cook receives:
+    * Shopping list
+    * Recipes (on demand)
 
-⸻
+5. Clean Recipe Experience
 
-🏗️ Architecture (High-Level)
-
-Users (Family Members)
-↓
-Telegram Group Chat
-↓
-Telegram Bot (bot.py)
-↓
-Business Logic (planner.py)
-↓
-LLM Service (OpenAI API)
-↓
-Storage (JSON / simple DB)
-
-Key components:
-
-Telegram Interface Layer
-	•	Handles commands (/start, /plan)
-	•	Creates polls
-	•	Sends results
-
-Planner (Business Logic)
-	•	Manages flow
-	•	Processes preferences
-	•	Builds final plan
-
-LLM Service
-	•	Generates meal options
-	•	Creates grocery lists
-
-Storage
-	•	Preferences
-	•	Poll data
-	•	Final menu
+* No spam of 21 recipes at once
+* Recipes are requested by day:
+    * Sunday recipes
+    * Monday recipes
+    * etc.
 
 ⸻
 
-🔄 User Flow
-	1.	User starts bot (/start)
-	2.	Bot collects basic preferences
-	3.	User triggers planning (/plan)
-	4.	AI generates meal options
-	5.	Bot creates Telegram poll
-	6.	Family votes
-	7.	Bot processes results
-	8.	Bot sends:
-	•	final meal plan
-	•	grocery list
+How It Works
+
+1. User starts the bot
+2. Optionally sets:
+    * Family profile
+    * Weekly priority products
+3. Chooses planning mode:
+    * Voting OR Smart plan
+4. Bot generates weekly menu
+5. After approval:
+    * Grocery list is generated
+    * Recipes are available per day
 
 ⸻
 
-🧱 Tech Stack
-	•	Python
-	•	Telegram Bot API
-	•	OpenAI API (LLM)
-	•	JSON (lightweight storage)
+Tech Stack
+
+* Python 3.9+
+* python-telegram-bot
+* OpenAI API
+* JSON-based recipe database
 
 ⸻
 
-📦 Project Structure
+Project Structure
 
-project/
+backend/
 
-bot.py              # Telegram interface
-planner.py          # Business logic
-llm_service.py      # AI integration
-storage.py          # Data handling
-prompts.py          # Prompt templates
-config.py           # Settings / tokens
+bot.py — main Telegram bot logic
+llm_service.py — AI meal generation
+recipe_service.py — recipe and grocery logic
+storage.py — user profile handling
 
-requirements.txt
-README.md
+recipes/
 
-⸻
+* breakfast.json
+* lunch.json
+* dinner.json
 
-⚖️ Scope (MoSCoW)
-
-MUST
-	•	Telegram bot
-	•	Meal generation via AI
-	•	Poll-based voting
-	•	Final menu + grocery list
-
-SHOULD
-	•	Better personalization
-	•	Cleaner UX
-
-WON’T (for MVP)
-	•	Store integrations (prices, discounts)
-	•	Complex multi-user profiles
-	•	Full database system
+.env — environment variables
+requirements.txt — dependencies
 
 ⸻
 
-🔮 Future Improvements
-	•	Integration with grocery stores (Migros / Coop)
-	•	Price-aware meal planning
-	•	Individual user profiles
-	•	Day-by-day meal scheduling
-	•	WhatsApp / mobile integration
+Setup Instructions
+
+1. Clone repository
+
+git clone https://github.com/your-repo/KitchenCopilotAI.git
+cd KitchenCopilotAI/backend
 
 ⸻
 
-🎯 Key Insight
+2. Create virtual environment
 
-This project is not about recipes.
-
-It’s about:
-Helping families make decisions faster and with less friction.
+python -m venv .venv
+source .venv/bin/activate
 
 ⸻
 
-🧪 How to Run (example)
+3. Install dependencies
 
-git clone 
-cd project
 pip install -r requirements.txt
+
+⸻
+
+4. Create .env file
+
+TELEGRAM_TOKEN=your_telegram_bot_token
+COOK_TELEGRAM_ID=your_telegram_id
+OPENAI_API_KEY=your_openai_key
+
+⸻
+
+5. Run the bot
+
 python bot.py
 
+You should see:
+“KitchenCoPilot AI is running…”
+
 ⸻
 
-👤 Author
+How to Use
+
+Open Telegram → Start your bot
+
+Option 1 — Voting mode
+
+* Plan meals day-by-day
+* Vote with family
+
+Option 2 — Smart plan
+
+* Get full weekly menu instantly
+* Approve or regenerate
+
+After approval:
+
+* Request shopping list
+* Request recipes by day
+
+⸻
+
+Future Improvements
+
+* Better cooking instructions (step-by-step recipes)
+* Save meal history to avoid repetition
+* Nutrition tracking (calories, macros)
+* Integration with supermarket promotions
+* Export to PDF or Notion
+* Multi-language support
+
+⸻
+
+Vision
+
+KitchenCoPilot AI aims to become a full family food assistant:
+
+* Plan smarter
+* Shop faster
+* Cook easier
+
+⸻
+
+Author
 
 Roman Andreyev
-AI / Product / Sales background
-
-⸻
-
-💬 Final Note
-
-KitchenCoPilot AI demonstrates how LLMs can be used not only for content generation,
-but for solving real-world coordination problems in everyday life.
+Built as part of a Powercoders individual project
